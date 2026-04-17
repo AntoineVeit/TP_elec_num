@@ -35,7 +35,7 @@ begin
 		end if;
 		count := count + 1;
 	
-		if count = max_count then
+		if count > (max_count - 1)  then
 			clk_out <= '1';
 			rst_flag := '1';
 		end if;
