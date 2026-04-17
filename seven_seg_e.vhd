@@ -1,3 +1,6 @@
+-- simple lookup table to drive the seven segment on the board
+
+
 library ieee;
 
 

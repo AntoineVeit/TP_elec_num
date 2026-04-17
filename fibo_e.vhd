@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_signed.ALL;
 
 
 entity fibo_e is
-	port(clk, en, rst : in std_logic;
+	port(clk, rst, en : in std_logic;
 			N : in std_logic_vector(7 downto 0);
 			data_out : out std_logic_vector(15 downto 0):=x"0001";
 			data_valid : out std_logic := '1'); 

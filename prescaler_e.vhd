@@ -1,3 +1,9 @@
+-- this block toggle the output at 1Hz
+-- it doesn't work stricly as a prescaler as the duty cycle isn't 50% 
+-- instead the on time is only equale to 1 period of the input frequency
+-- the generic argument allow the user to change the prescaler value depending of the input clock
+-- or the desired ouput frequency
+
 library ieee;
 
 
@@ -6,8 +12,8 @@ use IEEE.STD_LOGIC_signed.ALL;
 
 
 entity prescaler_e is
+	generic(N : in std_logic_vector(31 downto 0) := x"02faf080");
 	port(clk_in: in std_logic;
-			N : in std_logic_vector(31 downto 0);
 			clk_out: out std_logic);
 end entity;
 

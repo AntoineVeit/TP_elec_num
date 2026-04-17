@@ -84,8 +84,6 @@ set_location_assignment PIN_AC22 -to seven_seg_out3[6]
 
 set_global_assignment -name VHDL_FILE fibo_e.vhd
 set_location_assignment PIN_P11 -to KEY0
-set_location_assignment PIN_P12 -to KEY1
-set_location_assignment PIN_Y15 -to KEY2
 set_global_assignment -name VHDL_FILE prescaler_e.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
@@ -102,4 +100,14 @@ set_global_assignment -name VHDL_FILE uart_e.vhd
 set_global_assignment -name VHDL_FILE BRGH_e.vhd
 set_location_assignment PIN_L9 -to TX_pin
 set_location_assignment PIN_Y8 -to debug_pin
+set_global_assignment -name VHDL_FILE binary_bcd_e.vhd
+set_location_assignment PIN_AC9 -to SW[0]
+set_location_assignment PIN_AE10 -to SW[1]
+set_location_assignment PIN_AD13 -to SW[2]
+set_location_assignment PIN_AC8 -to SW[3]
+set_location_assignment PIN_W11 -to SW[4]
+set_location_assignment PIN_AB10 -to SW[5]
+set_location_assignment PIN_V10 -to SW[6]
+set_location_assignment PIN_AC10 -to SW[7]
+set_location_assignment PIN_AE19 -to SW9
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

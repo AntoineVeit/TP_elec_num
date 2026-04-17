@@ -1,3 +1,8 @@
+--this block generate the baudrate clock at predefined frequency of 
+-- 9600 bits/s and 19200 bits/s depending on the "sel" input
+-- work just like a prescaler but with hardcoded division values
+
+
 library ieee;
 
 
@@ -19,9 +24,9 @@ begin
 	begin
 	if clk_in'event and clk_in='1' then
 		if sel = '1' then
-			max_count := x"00001458";
+			max_count := x"00001458"; -- max value for 9600
 		else 
-			max_count := x"00000A2C";
+			max_count := x"00000A2C"; -- max value for 19200
 		end if;
 		clk_out <= '0';
 		if rst_flag = '1'then
