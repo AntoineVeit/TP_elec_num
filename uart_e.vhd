@@ -20,11 +20,12 @@ begin
 	variable message_bit_count, en_flag : integer := 0;
 	variable message : std_logic_vector(9 downto 0);
 	begin
-	
-	if data_valid = '1' then
-		message := b"1010000100";	--char "B" LSB fisrt (data valid)
-	else
-		message := b"1010001010";	--char "E" LSB fisrt (data error)
+	if en_flag = 0 then
+		if data_valid = '1' then
+			message := b"1010000100";	--char "B" LSB fisrt (data valid)
+		else
+			message := b"1010001010";	--char "E" LSB fisrt (data error)
+		end if;
 	end if;
 	
 	if clk'event and clk = '1' then
